@@ -6,6 +6,7 @@ public class Probability {
 
     public Probability(double probability) {
         this.probability = probability;
+
     }
 
     @Override
@@ -21,4 +22,19 @@ public class Probability {
 
         return Objects.hash(probability);
     }
+
+    public Probability not() {
+        return  new Probability(1 - probability);
+    }
+
+    public Probability and(Probability probabilityOfSecondCoin) {
+        return new Probability(probabilityOfSecondCoin.probability * this.probability);
+    }
+
+    public Probability or(Probability probabilityOfSecondCoin) {
+
+        return not().and(probabilityOfSecondCoin.not()).not();
+    }
+
+
 }
