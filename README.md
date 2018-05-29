@@ -1,0 +1,1 @@
+As a maths student i want to represent chance of getting a tail while flipping a coin
