@@ -37,23 +37,23 @@ public class ProbabilityTest {
 
     @Test
     public void returnProbabilityOfGettingExactlyTwoBlueBalls() {
-        ProbabilityOfBalls probabilityOfBalls = new ProbabilityOfBalls(5,1,2,2);
+        BagOfBalls probabilityOf = new BagOfBalls(5,1,2,2);
 
-        assertEquals(probabilityOfBalls.exactly(0,2,0), new ProbabilityOfBalls(0.1));
+        assertEquals(probabilityOf.exactly(0,2,0), new Probability(0.1));
     }
 
     @Test
     public void returnProbabilityOfGettingExactlyOneRedAndOneBlueBall() {
-        ProbabilityOfBalls probabilityOfBalls = new ProbabilityOfBalls(5,1,2,2);
+        BagOfBalls probabilityOf = new BagOfBalls(5,1,2,2);
 
-        assertEquals(probabilityOfBalls.exactly(1,1,0), new ProbabilityOfBalls(0.2));
+        assertEquals(probabilityOf.exactly(1,1,0), new Probability(0.2));
     }
 
     @Test
     public void returnProbabilityOfGettingThreeDistinctBalls() {
-        ProbabilityOfBalls probabilityOfBalls = new ProbabilityOfBalls(5,1,2,2);
+        BagOfBalls probabilityOf = new BagOfBalls(5,1,2,2);
 
-        assertEquals(probabilityOfBalls.exactly(1,1,1), new ProbabilityOfBalls(0.4));
+        assertEquals(probabilityOf.exactly(1,1,1), new Probability(0.4));
     }
 
 }
